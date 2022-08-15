@@ -1,9 +1,8 @@
 
-
-import React, {useState} from 'react'
+import { useState } from 'react';
 import Button from './Button'
 
-const SetPomodorà = () => {
+const SetPomodoro = () => {
     const [newTimer, setNewTimer] = useState ({
         work : 0.3,
         short : 0.1,
@@ -32,17 +31,18 @@ const SetPomodorà = () => {
                 long : parseInt(value)
             }) 
         }
-
-       
-
     } 
+    const handleSubmit = (e)=>{
+      e.preventDefault();
+      //updateExecute(newTimer)
+    }
   return (
     <div className='form-container'>
         <form noValidate>
             <div className='input-wrapper'>
-                <input className='input' name='work' onChange={handleChange} value = {0}/>
-                <input className='input' name='ShortBreak' onChange={handleChange} value = {0}/>
-                <input className='input' name='LongBreak' onChange={handleChange} value = {0}/>
+                <input className='input' name='work' onChange={handleChange} value = {newTimer.work}/>
+                <input className='input' name='ShortBreak' onChange={handleChange} value = {newTimer.short}/>
+                <input className='input' name='LongBreak' onChange={handleChange} value = {newTimer.long}/>
 
             </div>
         </form>
@@ -51,4 +51,4 @@ const SetPomodorà = () => {
   )
 }
 
-export default SetPomodorà
+export default SetPomodoro;
