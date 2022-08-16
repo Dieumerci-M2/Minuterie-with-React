@@ -9,12 +9,16 @@ function App() {
   
   return (
      <div className="Container">
-      <BreakLength/>
-      <div>
-        <Session/>
-        <Buttons/>
+      <h1>Pomodoro</h1>
+      <div className="Sub-Container">
+        <BreakLength/>
+        <div>
+          <Session/>
+          <Buttons/>
+        </div>
+        <SessionLength/>
       </div>
-      <SessionLength/>
+      
       </div>
       
   );
