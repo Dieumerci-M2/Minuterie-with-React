@@ -1,8 +1,12 @@
 import React from 'react'
+import '../styles/Session.css'
 
 const Session = () => {
   return (
-    <div>Session</div>
+    <div>
+        <span>25 : 00</span>
+      
+    </div>
   )
 }
 

@@ -1,8 +1,13 @@
 import React from 'react'
+import '../styles/Buttons.css'
 
 const Buttons = () => {
   return (
-    <div>Buttons</div>
+    <div>
+        <button>Play</button>
+        <button>Pause</button>
+        <button>Reset</button>
+    </div>
   )
 }
 
