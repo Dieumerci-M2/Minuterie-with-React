@@ -12,9 +12,12 @@
       animation: App-logo-spin infinite 20s linear;
     }
   }
-  
+  .Container{
+    background-color: rgb(217, 184, 140);
+  }
   .Sub-Container{
-    background-color: white;
+    background-color: black;
+    color : white;
     min-height: 100vh;
     display: flex;
     flex-direction: row;

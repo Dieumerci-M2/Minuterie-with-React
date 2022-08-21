@@ -1,5 +1,5 @@
 #play{
-    background-color: green;
+    background-color: rgba(49, 194, 49, 0.861);
     cursor : pointer;
     border: 0;
     line-height: 2.5;
@@ -12,11 +12,11 @@
     border-radius: 5px;
 }
 #play:hover{
-    background-color: rgba(102, 227, 71, 0.844);
+    background-color: rgba(96, 177, 75, 0.746);
     border: 1px solid white;
 }
 #pause{
-    background-color: red;
+    background-color: rgba(211, 37, 37, 0.795);
     cursor: pointer;
     border: 0;
     line-height: 2.5;
@@ -29,11 +29,11 @@
     border-radius: 5px;
 }
 #pause:hover{
-    background-color: rgba(202, 47, 42, 0.844);
+    background-color: rgba(174, 66, 63, 0.704);
     border: 1px solid white;
 }
 #reset{
-    background-color: yellow;
+    background-color: rgba(212, 191, 54, 0.844);
     cursor: pointer;
     border: 0;
     line-height: 2.5;
@@ -45,7 +45,8 @@
     width : 60px;
     border-radius: 5px;
 }
+
 #reset:hover{
-    background-color: rgba(212, 191, 54, 0.844);
+    background-color: rgba(202, 187, 94, 0.678);
     border: 1px solid white; 
 }
