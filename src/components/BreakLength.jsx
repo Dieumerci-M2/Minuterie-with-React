@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 import '../styles/BreakLength.css'
+import {AiOutlinePlusCircle} from 'react-icons/ai'
+import {AiOutlineMinusCircle} from 'react-icons/ai'
 
 const BreakLength = () => {
 
@@ -20,8 +22,13 @@ const BreakLength = () => {
     <div>
         <h3>Break Length</h3>
         <h1>{valeur}</h1>
-        <button onClick={incremente} id = 'btnPlus'>+</button>
-        <button onClick={decremente} id = 'btnMinus' >-</button>
+        <button onClick={incremente} id = 'btnPlus'>
+        <AiOutlinePlusCircle />  
+        </button>
+       
+        <button onClick={decremente} id = 'btnMinus' >
+            <AiOutlineMinusCircle />
+        </button>
     </div>
   )
 }

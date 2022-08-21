@@ -8,7 +8,6 @@ function App() {
   
   return (
      <div className="Container">
-      <h1>Pomodoro</h1>
       <div className="Sub-Container">
         <BreakLength/>
         <Session/>

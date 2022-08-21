@@ -1,5 +1,5 @@
 #btnPlus{
-    background-color: green;
+    background-color: rgba(49, 194, 49, 0.861);
     cursor : pointer;
     border: 0;
     line-height: 2.5;
@@ -12,11 +12,11 @@
     border-radius: 5px;
 }
 #btnPlus:hover{
-    background-color: rgba(102, 227, 71, 0.844);
+    background-color: rgba(96, 177, 75, 0.746);
     border: 1px solid white;
 }
 #btnMinus{
-    background-color: yellow;
+    background-color: rgba(212, 191, 54, 0.844);
     cursor : pointer;
     border: 0;
     line-height: 2.5;
@@ -29,6 +29,6 @@
     border-radius: 5px;
 }
 #btnMinus:hover{
-    background-color: rgba(212, 191, 54, 0.844);
+    background-color: rgba(217, 201, 95, 0.609);
     border: 1px solid white; 
 }
