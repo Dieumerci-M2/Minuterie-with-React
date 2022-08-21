@@ -17,9 +17,10 @@ const SessionLength = () => {
         }
   return (
     <div>
+        <h3>Session Length</h3>
         <h1>{valeur}</h1>
-        <button onClick={incremente}>+</button>
-        <button onClick={decremente}>-</button>
+        <button onClick={incremente} id ='btnPlus'>+</button>
+        <button onClick={decremente} id = 'btnMinus'>-</button>
     </div>
   )
 }
