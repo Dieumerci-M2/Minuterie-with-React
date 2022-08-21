@@ -1,6 +1,37 @@
 #btnPlus{
     background-color: green;
+    cursor : pointer;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    width : 60px;
+    border-radius: 5px;
+
+}
+#btnPlus:hover{
+    background-color: rgba(102, 227, 71, 0.844);
+    border: 1px solid white;
 }
 #btnMinus{
     background-color: yellow;
+    cursor : pointer;
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    width : 60px;
+    border-radius: 5px;
+
+}
+#btnMinus:hover{
+    background-color: rgba(212, 191, 54, 0.844);
+    border: 1px solid white; 
+
 }
