@@ -3,7 +3,7 @@ import { useState } from 'react'
 import '../styles/SessionLength.css'
 import {AiOutlinePlusCircle} from 'react-icons/ai'
 
-const SessionLength = () => {
+const SessionLength = (props) => {
     const [valeur , setValeur] = useState(25)
 
     // Fonction pour Incrementer la valeur passée en paramètre
