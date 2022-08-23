@@ -4,30 +4,40 @@ import {BsPlayCircle} from 'react-icons/bs'
 import {FaRegPauseCircle} from 'react-icons/fa'
 import {GrPowerReset} from 'react-icons/gr'
 import SessionLength from './SessionLength'
-import {useState } from 'react'
-
+import {useState } from 'r
 const Session = (props) => {
-  const [startTime, setstartTime] = useState(60)
+  const [second, setsecond] = useState(0)
+  const [minute , setminute] = useState(25)
+
 
 const decrementer = ()=>{
-  setInterval(()=>{
-    setstartTime((lastTime)=> lastTime - 1)
-  }, 1000)
+
+    // setminute(minute-1)
+    // setsecond(59)
+     setInterval(()=>{
+      setsecond((lastTime)=> {
+        if(!lastTime) setminute(min => min - 1);
+        return lastTime ? lastTime-1 : 59
+      })
+    }, 400)
+}
+const refleshPage = ()=>{
+  window.location.reload(false);
 }
 
   return (
     <div>
-        <h1>Pomodoro</h1>
+        <h1>25-5 Clock</h1>
         <h3>Session</h3>
-        <h3>{startTime}</h3>
+        <span>{minute}</span><span>:</span><span>{second}</span>
         <div>
-          <button onClick={()=>decrementer()} id='play'>
+          <button onClick={()=>{decrementer()}} id='play'>
             <BsPlayCircle />
           </button>
           <button onClick={()=>{}} id ='pause' >
             <FaRegPauseCircle />
           </button>
-          <button onClick={()=>{}} id ='reset'>
+          <button onClick={()=>{refleshPage()}} id ='reset'>
             <GrPowerReset />
           </button>
         </div> 
