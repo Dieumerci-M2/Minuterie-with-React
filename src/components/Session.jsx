@@ -4,17 +4,18 @@ import {BsPlayCircle} from 'react-icons/bs'
 import {FaRegPauseCircle} from 'react-icons/fa'
 import {GrPowerReset} from 'react-icons/gr'
 import SessionLength from './SessionLength'
-import {useState } from 'r
+import {useState, useRef} from 'react'
+
+
+
 const Session = (props) => {
   const [second, setsecond] = useState(0)
   const [minute , setminute] = useState(25)
-
-
+  let interval = useRef()
+  
 const decrementer = ()=>{
 
-    // setminute(minute-1)
-    // setsecond(59)
-     setInterval(()=>{
+      setInterval(()=>{
       setsecond((lastTime)=> {
         if(!lastTime) setminute(min => min - 1);
         return lastTime ? lastTime-1 : 59
@@ -22,7 +23,7 @@ const decrementer = ()=>{
     }, 400)
 }
 const refleshPage = ()=>{
-  window.location.reload(false);
+  interval.current = window.location.reload(false);
 }
 
   return (
@@ -34,7 +35,7 @@ const refleshPage = ()=>{
           <button onClick={()=>{decrementer()}} id='play'>
             <BsPlayCircle />
           </button>
-          <button onClick={()=>{}} id ='pause' >
+          <button onClick={()=>{clearInterval(interval)}} id ='pause' >
             <FaRegPauseCircle />
           </button>
           <button onClick={()=>{refleshPage()}} id ='reset'>
