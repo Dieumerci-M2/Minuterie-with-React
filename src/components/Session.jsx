@@ -3,31 +3,23 @@ import '../styles/Session.css'
 import {BsPlayCircle} from 'react-icons/bs'
 import {FaRegPauseCircle} from 'react-icons/fa'
 import {GrPowerReset} from 'react-icons/gr'
-import SessionLength from './SessionLength'
-import {useState } from 'react'
+import audio from '../assets/Iphone-13-Prototype-2022.mp3'
 
 const Session = (props) => {
-  const [startTime, setstartTime] = useState(60)
-
-const decrementer = ()=>{
-  setInterval(()=>{
-    setstartTime((lastTime)=> lastTime - 1)
-  }, 1000)
-}
-
+  
   return (
     <div>
-        <h1>Pomodoro</h1>
+        <h1>25-5 Clock</h1>
         <h3>Session</h3>
-        <h3>{startTime}</h3>
+        <span>{props.minute}</span><span>:</span><span>{props.second}</span>
         <div>
-          <button onClick={()=>decrementer()} id='play'>
+          <button onClick={()=>{props.decrementer()}} id='play'>
             <BsPlayCircle />
           </button>
-          <button onClick={()=>{}} id ='pause' >
+          <button onClick={()=>{clearInterval(props.interval)}} id ='pause' >
             <FaRegPauseCircle />
           </button>
-          <button onClick={()=>{}} id ='reset'>
+          <button onClick={()=>{props.refleshPage()}} id ='reset'>
             <GrPowerReset />
           </button>
         </div> 
