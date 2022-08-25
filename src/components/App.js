@@ -3,15 +3,15 @@ import '../styles/App.css'
 import BreakLength from "./BreakLength";
 import Session from "./Session";
 import SessionLength from "./SessionLength";
-import {useState,useRef} from 'react';
-
-
+import {useState} from 'react';
+let interval;
 function App() {
   const [second, setsecond] = useState(0)
   const [minute , setminute] = useState(25)
   const [valeurbreak , setValeurbreak] = useState(5)
   const [valeur , setValeur] = useState(25)
-  let interval = useRef()
+  //let [interval , setInter] = useState()
+  
 
   // Fonction pour Incrementer la valeur passée en paramètre
   
@@ -35,15 +35,18 @@ function App() {
     }
     const decrementer = ()=>{
 
-      interval.current = setInterval(()=>{
+     interval = setInterval(()=>{
       setsecond((lastTime)=> {
         if(!lastTime) setminute(min => min - 1);
         return lastTime ? lastTime-1 : 59
       })
-    }, 400)
+    }, 1000)
 }
 const refleshPage = ()=>{
-  interval.current = window.location.reload(false);
+  window.location.reload(false);
+}
+const breaker = ()=>{
+  return clearInterval(interval)
 }
   return (
     <div className="Container">
@@ -55,10 +58,11 @@ const refleshPage = ()=>{
         <Session
           refleshPage = {refleshPage} decrementer = {decrementer}
           valeur = {valeur} minute = {minute} second = {second}
+          breaker = {breaker}
         />
         <SessionLength
           incremente = {incremente} decremente = {decremente}
-          valeur = {valeur}
+          valeur = {valeur} 
         />  
       </div>
     </div>
